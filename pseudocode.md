@@ -1,125 +1,92 @@
-Here the pseudocode is listed down with some comments for it.
+# Section A: Pseudocode for Phonebook Application
 
-###1. Insert Contact
-Pseudocode:
+# Module 1: Insert Contact
+# Adds a new contact to the phonebook
 Start
-  # Step 1: Prompt user for contact name
-  Prompt user for "Enter contact name"
+  Prompt user with "Enter contact name"
   Get name
-
-  # Step 2: Prompt user for contact number
-  Prompt user for "Enter contact number"
+  Prompt user with "Enter contact number"
   Get number
-
-  # Step 3: Create a new contact using the inputs
-  Create new contact as (name, number)
-
-  # Step 4: Append the contact to the phonebook list
-  Append contact to phonebook list
-
-  # Step 5: Confirm successful addition
+  Create a new contact with (name, number)
+  Append contact to the phonebook list
   Display "Contact added successfully"
 End
 
-###2. Search Contact
-Pseudocode:
+# Module 2: Search Contact
+# Searches for a contact by name in the phonebook
 Start
-  # Step 1: Prompt user for the contact name to search
-  Prompt user for "Enter contact name"
+  Prompt user with "Enter contact name to search"
   Get name
-
-  # Step 2: Iterate through the phonebook list to find the contact
-  For each contact in phonebook
-    # Step 3: Check if the contact's name matches the input
+  Set found to False
+  For each contact in the phonebook
     If contact.name equals name
-      # Step 4: Display the contact's details if found
-      Display contact details
-      Exit
-
-  # Step 5: If contact not found, display a message
-  Display "Contact not found"
+      Display contact details (name, number)
+      Set found to True
+      Exit loop
+  If found is False
+    Display "Contact not found"
 End
 
-###3. Delete Contact
-Pseudocode:
+# Module 3: Delete Contact
+# Deletes a contact by name from the phonebook
 Start
-  # Step 1: Prompt user for the contact name to delete
-  Prompt user for "Enter contact name"
+  Prompt user with "Enter contact name to delete"
   Get name
-
-  # Step 2: Iterate through the phonebook list
-  For each contact in phonebook
-    # Step 3: Check if the contact's name matches the input
+  Set found to False
+  For each contact in the phonebook
     If contact.name equals name
-      # Step 4: Remove the contact from the phonebook list
-      Remove contact from phonebook list
-      Display "Contact deleted"
-      Exit
-
-  # Step 5: If contact not found, display a message
-  Display "Contact not found"
+      Remove contact from the phonebook list
+      Display "Contact deleted successfully"
+      Set found to True
+      Exit loop
+  If found is False
+    Display "Contact not found"
 End
 
-###4. Update Contact
-Pseudocode:
+# Module 4: Update Contact
+# Updates the phone number of an existing contact
 Start
-  # Step 1: Prompt user for the contact name to update
-  Prompt user for "Enter contact name"
+  Prompt user with "Enter contact name to update"
   Get name
-  # Step 2: Iterate through the phonebook list
-  For each contact in phonebook
-    # Step 3: Check if the contact's name matches the input
+  Set found to False
+  For each contact in the phonebook
     If contact.name equals name
-      # Step 4: Prompt user for the new number
-      Prompt user for "Enter new contact number"
-      Get new number
-       # Step 5: Update the contact's number
-       Update contact number
-        # Step 6: Confirm the update was successful
-        Display "Contact updated"
-        Exit
-    # Step 7: If contact not found, display a message
-      Display "Contact not found"
-   End
+      Prompt user with "Enter new contact number"
+      Get newNumber
+      Update contact.number to newNumber
+      Display "Contact updated successfully"
+      Set found to True
+      Exit loop
+  If found is False
+    Display "Contact not found"
+End
 
-###5. Display All Contacts
-Pseudocode:
+# Module 5: Display All Contacts
+# Displays all the contacts in the phonebook
 Start
-  # Step 1: Check if the phonebook is empty
   If phonebook is empty
-    # Step 2: Display message if there are no contacts
     Display "No contacts to display"
   Else
-    # Step 3: Iterate through the phonebook and display each contact
-    For each contact in phonebook
-      Display contact details
+    For each contact in the phonebook
+      Display contact.name and contact.number
 End
 
-###6. Sort Contacts (Optional)
-Pseudocode:
+# Module 6: Sort Contacts (Optional)
+# Sorts the contacts alphabetically by name to improve search performance
 Start
-  # Step 1: Check if the phonebook is not empty
   If phonebook is not empty
-    # Step 2: Sort the contacts by name in ascending order
-    Sort contacts by name (ascending)
-
-  # Step 3: Confirm the contacts are sorted
-  Display "Contacts sorted"
+    Sort contacts in phonebook by contact.name in ascending order
+    Display "Contacts sorted successfully"
+  Else
+    Display "No contacts to sort"
 End
 
-###7. Efficiency Analysis (Search Algorithm)
-Pseudocode:
+# Module 7: Efficiency Analysis (Search Algorithm)
+# Analyzes the time complexity of the search algorithm
 Start
-  # Step 1: Count the number of contacts in the phonebook as n
-  Count contacts in phonebook as n
-
-  # Step 2: Analyze the time complexity of the search operation
-  If search is linear (unsorted)
-    Time complexity = O(n)
-
-  # Step 3: Analyze time complexity if sorting is applied
-  If contacts are sorted (optional)
-    Time complexity of binary search = O(log n)
+  Count the number of contacts in the phonebook as n
+  If using linear search (unsorted)
+    Time complexity is O(n)
+  If using binary search (after sorting)
+    Time complexity is O(log n)
 End
-
-
