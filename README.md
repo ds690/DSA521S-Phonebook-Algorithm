@@ -179,3 +179,81 @@ The project is fully documented with clear descriptions of each module and funct
 This project provides a fully functional phonebook application using linear data structures and modular design principles. All key operations such as inserting, searching, deleting, and updating contacts are supported, and the efficiency of the search operation is analyzed.
 
 ---
+# Phonebook Java Project(Part B)
+
+## Description
+This is a Java-based Phonebook application that allows users to manage a list of contacts. The project includes features such as inserting, searching, updating, deleting, and sorting contacts. Additionally, the application saves contacts to a file and loads them when the program starts.
+
+This project was implemented as part of the **Part B** assignment, following the design from **Part A**.
+
+## Features
+- **Insert Contact**: Add a new contact with a name and phone number.
+- **Search Contact**: Search for a contact by name using binary search after sorting.
+- **Update Contact**: Update the phone number of an existing contact.
+- **Delete Contact**: Remove a contact by name.
+- **Sort Contacts**: Sort the list of contacts alphabetically by name.
+- **File I/O**: 
+  - **Save contacts** to a file (`contacts.txt`).
+  - **Load contacts** from the file when the program starts.
+
+## How to Run
+
+### Prerequisites
+- **Java Development Kit (JDK)** installed on your machine.
+- **Apache NetBeans IDE** (or any other IDE of your choice).
+
+### Steps to Run the Program:
+1. **Download or Clone the Repository**:
+   - You can clone the repository using:
+     ```bash
+     git clone https://github.com/yourusername/Phonebook-Java-Project.git
+     ```
+     or download the ZIP file and extract it to your preferred location.
+  
+2. **Open the Project in Apache NetBeans**:
+   - Open **NetBeans**.
+   - Navigate to **File > Open Project**.
+   - Select the `Phonebook Project` folder and click **Open**.
+
+3. **Run the Program**:
+   - Right-click on the `Phonebook.java` file inside the **src** folder.
+   - Select **Run File** to execute the application.
+   - The program will display a menu in the console for the phonebook operations.
+
+4. **Using the Phonebook**:
+   - You will be prompted with the following menu in the console:
+     ```
+     Phonebook Menu:
+     1. Insert Contact
+     2. Search Contact
+     3. Update Contact
+     4. Delete Contact
+     5. Sort Contacts
+     6. Exit
+     ```
+   - Choose the desired operation by typing the corresponding number and following the prompts.
+
+### Example Usage:
+1. To **insert a contact**, choose option `1`, then enter the contact name and number.
+2. To **search for a contact**, choose option `2`, then enter the contact name to search.
+3. To **update a contact**, choose option `3` and provide the contact name and new phone number.
+4. To **delete a contact**, choose option `4` and provide the contact name.
+5. To **sort contacts**, choose option `5` and the contacts will be sorted alphabetically.
+6. Choose option `6` to exit the program.
+
+## File I/O (contacts.txt)
+- The application automatically saves all contacts to `contacts.txt` when any changes are made (adding, updating, deleting).
+- When the application starts, it loads the contacts from this file, ensuring data persistence across sessions.
+
+## Project Structure
+- **src**: Contains the main Java files (`Phonebook.java` and `Contact.java`).
+- **build.xml**: The build configuration for NetBeans.
+- **contacts.txt**: The file where contacts are stored.
+
+## Future Enhancements
+Possible future improvements could include:
+- Implementing a graphical user interface (GUI) using Java Swing or JavaFX.
+- Adding validation to ensure that phone numbers only contain digits.
+- Adding the ability to export contacts to other formats, such as CSV.
+
+
