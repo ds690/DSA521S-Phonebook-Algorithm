@@ -161,7 +161,8 @@ The pseudocode is added to pseudocode.md file in the repository.
 ## Flowchart
 
 - Flowchart: A detailed flowchart representing each of the phonebook operations is included below.
-- ![Flow Chart Phonebook](https://github.com/user-attachments/assets/97491724-0418-4db8-af1d-66d0ab55f173)
+- ![Flow Chart Phonebook drawio (1)](https://github.com/user-attachments/assets/5601bcb5-39a4-4140-9148-ecaa6e9e7ee6)
+
 
 
 
